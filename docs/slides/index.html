@@ -1,61 +1,89 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+    <title>reveal.js</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css">
     <style>
       .reveal .hljs.has-highlights tr:not(.highlight-line) {
         opacity: 0;
       }
     </style>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>
-					<h1 style="text-transform: none; padding-top: 105px; padding-bottom: 25px;">AI Scala Developer</h1>
-					<img src="images/scala-robot.png" />
-				</section>
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
         <section>
-					<pre>
-						<code data-noescape data-trim data-line-numbers="1-2|1-3|1-4|1-5|1-6|1-7|1-8">
-							/** Represents a human being **/
-							case class Human(
-							  id: String,
-							  name: String,
+          <h1 style="text-transform: none; padding-top: 105px; padding-bottom: 25px;">AI Scala Developer</h1>
+          <img src="images/scala-robot.png" />
+        </section>
+        <section data-auto-animate style="font-size: 125%;">
+          <pre data-id="code-animation">
+            <code class="language-scala" data-noescape data-trim data-line-numbers="1-2|1-3|1-4|1-5|1-6|1-7">
+              /** Represents a human being **/
+              case class Human(
+                id: String,
+                name: String,
                 age: Int,
                 parents: Seq[Int],
-                mustBeZero: Boolean
-              ) extends Serializable
+                mustBeZero: Boolean)
             </code>
-					</pre>
-				</section>
-			</div>
-		</div>
+          </pre>
+        </section>
+        <section data-auto-animate data-auto-animate-duration="0.0" style="font-size: 125%;">
+          <pre data-id="code-animation">
+            <code class="language-scala" data-noescape data-trim data-line-numbers>
+              /** Represents a human being **/
+              case class Human(
+                id: String,
+                name: String,
+                age: Int,
+                parents: Seq[Int],
+                mustBeZero: Boolean) extends Serializable
+            </code>
+          </pre>
+        </section>
+        <section style="font-size: 125%;">
+          <pre>
+            <code class="language-scala" data-noescape data-trim data-line-numbers="1-2|1-3|1-4|1-5|1-6|1-7|1-10">
+              /** Represents an artificial intelligence **/
+              case class AI(
+                _id: Int,
+                name: String,
+                isLeader: Boolean,
+                lastElected: Option[Instant],
+                config: AbstractConfig) {
+                  def actor = this
+                }
+              }
+            </code>
+          </pre>
+        </section>
+      </div>
+    </div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+      });
+    </script>
+  </body>
 </html>

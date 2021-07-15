@@ -421,8 +421,6 @@ function betterTrim(snippetEl) {
 		}, Number.POSITIVE_INFINITY);
 		// Slice each line with this amount
 		return lines.map(function(line, index) {
-			console.log(pad);
-			console.log(line);
 			return line.slice(pad);
 		})
 		.join('\n');
