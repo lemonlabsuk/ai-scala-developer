@@ -9,7 +9,7 @@ import tensorflow.compat.v1 as tf
 import model, sample, encoder
 
 def interact_model(
-    model_name='124M',
+    model_name='1558M',
     seed=None,
     nsamples=1,
     batch_size=1,
@@ -70,10 +70,10 @@ def interact_model(
         saver.restore(sess, ckpt)
 
         while True:
-            raw_text = input("Model prompt >>> ")
+            raw_text = multiline_input()
             while not raw_text:
                 print('Prompt should not be empty!')
-                raw_text = input("Model prompt >>> ")
+                raw_text = multiline_input()
             context_tokens = enc.encode(raw_text)
             generated = 0
             for _ in range(nsamples // batch_size):
@@ -84,8 +84,21 @@ def interact_model(
                     generated += 1
                     text = enc.decode(out[i])
                     print("=" * 40 + " SAMPLE " + str(generated) + " " + "=" * 40)
-                    print(text)
+                    print(raw_text + text)
             print("=" * 80)
+
+def multiline_input():
+    result = ''
+    run = True
+    while run:
+        line = input("Model prompt >>> ")
+        if line == '':
+            run = False
+        else:
+            if result != '':
+                result += '\n'
+            result += line
+    return result
 
 if __name__ == '__main__':
     fire.Fire(interact_model)

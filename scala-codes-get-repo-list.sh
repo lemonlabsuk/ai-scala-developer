@@ -1,0 +1,1 @@
+curl https://raw.githubusercontent.com/kaxap/arl/master/README-Scala.md | cut -d'|' -f6 | grep -oE 'https://github.com/[^/]+/[^\)]+' > scala-codes-repos.txt
