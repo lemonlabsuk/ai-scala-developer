@@ -15,3 +15,12 @@ scala-codes.npz
 
 
 venv/
+
+docs/slides/out/
+docs/slides/.DS_Store
+docs/slides/.svn
+docs/slides/log/*.log
+docs/slides/tmp/**
+docs/slides/node_modules/
+docs/slides/.sass-cache
+docs/slides/dist/*.map
