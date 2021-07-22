@@ -24,3 +24,4 @@ docs/slides/tmp/**
 docs/slides/node_modules/
 docs/slides/.sass-cache
 docs/slides/dist/*.map
+.DS_Store

@@ -13,6 +13,11 @@
       .reveal .hljs.has-highlights tr:not(.highlight-line) {
         opacity: 0;
       }
+
+      img.mini-v100 {
+        width: 175px;
+        margin: -10px 0;
+      }
     </style>
 
     <!-- Theme used for syntax highlighted code -->
@@ -22,8 +27,70 @@
     <div class="reveal">
       <div class="slides">
         <section>
-          <h1 style="text-transform: none; padding-top: 105px; padding-bottom: 25px;">AI Scala Developer</h1>
-          <img src="images/scala-robot.png" />
+          <h1 style="text-transform: none; padding-top: 50px; padding-bottom: 25px; line-height:0.75em;"><span style="font-size: 40%">The</span><br />AI Scala Developer</h1>
+          <img style="filter: drop-shadow(5px 5px 5px #444);" src="images/scala-robot.png" />
+        </section>
+        <section>
+           <ol style="font-size:125%;line-height:2.5em;">
+             <li>Will the code compile?</li>
+             <li class="fragment">Will the code makes sense?</li>
+             <li class="fragment">Can a n00b train AI?</li>
+           </ol>
+        </section>
+        <section>
+          <h1 class="r-fit-text">GPT-3</h1>
+        </section>
+        <section>
+          <ul style="font-size:125%;line-height:2.5em;">
+            <li>Released June 2020 by OpenAI</li>
+            <li class="fragment">Human-like text prediction</li>
+          </ul>
+        </section>
+        <section>
+          <ul style="font-size:125%;line-height:2.5em;">
+            <li class="fragment">Example prompt</li>
+            <li class="fragment">Example result</li>
+          </ul>
+        </section>
+        <section>
+          <ul style="font-size:125%;line-height:2.5em;">
+            <li>Pretraining (~45TB dataset) </li>
+            <li class="fragment">Finetuning</li>
+          </ul>
+        </section>
+        <section>
+          <h1 style="font-size: 2.5em;">Demo: AI Dungeon</h1>
+        </section>
+        <section>
+          <h1 style="font-size: 2.5em;">Demo: JSX</h1>
+        </section>
+        <section style="font-size: 125%;">
+          <pre>
+            <code class="language-scala" data-noescape data-trim data-line-numbers="1|1-2">
+              > Demo small training (10mins)
+              > input > output
+            </code>
+          </pre>
+        </section>
+        <section style="font-size: 125%;">
+          <pre>
+            <code data-noescape data-trim>
+              [15 | 1712.83] loss=1.45 avg=1.62
+              [16 | 1822.60] loss=1.38 avg=1.61
+              [17 | 1936.64] loss=1.36 avg=1.59
+              [18 | 2046.39] loss=1.81 avg=1.60
+              [19 | 2157.61] loss=1.17 avg=1.58
+              [20 | 2269.73] loss=1.74 avg=1.59
+              [21 | 2380.28] loss=1.39 avg=1.58
+              [22 | 2492.73] loss=1.65 avg=1.58
+              [23 | 2603.96] loss=1.83 avg=1.59
+              [24 | 2710.48] loss=1.50 avg=1.59
+              [25 | 2824.84] loss=1.35 avg=1.58
+            </code>
+          </pre>
+        </section>
+        <section>
+          <img style="border-radius: 50px; padding: 40px; background-color: white;" src="images/120m-training.png" />
         </section>
         <section data-auto-animate style="font-size: 125%;">
           <pre data-id="code-animation">
@@ -67,6 +134,137 @@
             </code>
           </pre>
         </section>
+        <section style="font-size: 125%;">
+          <pre>
+            <code class="language-scala" data-noescape data-trim data-line-numbers="1-8|1-12">
+              /**
+                * This method implements fizzbuzz. 
+                * From 0 to n:
+                *  - if the number is divisible by 3. print fizz
+                *  - if it is divisible by 5, print buzz
+                *  - else print the number
+                */
+              def fizzbuzz(max: Int): Unit = { 
+                fizzing(max);
+                println("fizzed");
+                }
+              }
+            </code>
+          </pre>
+        </section>
+        <section style="font-size: 125%;">
+          <pre>
+            <code class="language-scala" data-noescape data-trim data-line-numbers="1-5|1-8">
+              /**
+                * This method returns the cartesian product of the two provided
+                * List of Integers
+                */
+              def cartesianProduct(a: List[Int], b: List[Int]): List[(Int, Int)] = for {
+                a     <- a;
+                b    <- b;
+              } yield (a, b)
+            </code>
+          </pre>
+        </section>
+        <section style="font-size: 125%;">
+          <pre>
+            <code class="language-scala" data-noescape data-trim data-line-numbers="1-4|1-5">
+              /**
+                * @return The minimum of the two specified values
+                */
+              def min(a: Int, b: Int): Int =
+                a min b
+            </code>
+          </pre>
+        </section>
+        <section>
+          <pre>
+            <code class="language-scala" data-noescape data-trim data-line-numbers="1-4|1-5|1-6|1-7|1-27">
+              /**
+                * This method parses a string into a list of CsvValues
+                * by splitting on commas
+                */
+              def parseStringFromString(csv: CSV): List[String] = {
+                val left = csv.split(",")
+                val right = csv.split(",")
+                val empty = if (empty == "" && csv.length() == 2) empty.trim else Nil
+                if (left.length() == right.length()) {
+                  var i = 0
+                  for (k <- csv.split(",")) {
+                    if (lsu(k).nonEmpty) {
+                      val sv = pw(k)
+                      left.drop(i) ++= sv.drop(i)
+                      i += 1
+                    }
+                  }
+                  if (right.length() == empty.length()) {
+                    left ++= right
+                  } else if (left.length() == empty.length()) {
+                    left ++= right
+                  } else {
+                    left ++= empty.drop(i)
+                  }
+                } else {
+                  Nil
+                }
+              }
+            </code>
+          </pre>
+        </section>
+        <section>
+          <img style="margin-top:-50px" src="images/nv100.png" />
+        </section>
+        <section>
+          <img style="border-radius: 50px; padding: 40px; background-color: white;" src="images/nv100-amazon.png" />
+        </section>
+        <section>
+          <img style="border-radius: 50px; padding: 40px; background-color: white;" src="images/nv100-ebay.png" />
+        </section>
+        <section data-auto-animate>
+          <div style="float:left; width: 30%; margin: 105px 0px 0px 100px;">
+            <img class="fragment" data-fragment-index="2" style="width:200px;margin-top: -20px;" src="images/pogchamp.png" />
+          </div>
+          <div style="float:left; width: 55%; margin-top:20px;">
+            <img class="mini-v100" src="images/nv100.png" />
+            <img class="mini-v100" src="images/nv100.png" />
+            <img class="mini-v100" src="images/nv100.png" /><br />
+            <img class="mini-v100" src="images/nv100.png" />
+            <img class="mini-v100" src="images/nv100.png" />
+            <img class="mini-v100" src="images/nv100.png" /><br />
+            <img class="mini-v100" src="images/nv100.png" />
+            <img class="mini-v100" src="images/nv100.png" />
+          <div>
+          <div data-id="price-tag" class="fragment" data-fragment-index="2" style="position: absolute;right: 0;top: 0;font-size: 3em;color: #191919;background-color: white;border-radius: 50px;margin: 155px 325px 0px 90px;padding: 5px 60px;">
+            <p>$30</p>
+          </div>
+        </section>
+        <section data-auto-animate data-auto-animate-duration="0.5">
+          <div style="float:left;width: 30%;margin: 105px 0px 0px 100px;">
+            <img style="width:200px" src="images/wutface.png" />
+          </div>
+          <div style="float:left; width: 55%; margin-top:20px;">
+            <img class="mini-v100" src="images/nv100.png" />
+            <img class="mini-v100" src="images/nv100.png" />
+            <img class="mini-v100" src="images/nv100.png" /><br />
+            <img class="mini-v100" src="images/nv100.png" />
+            <img class="mini-v100" src="images/nv100.png" />
+            <img class="mini-v100" src="images/nv100.png" /><br />
+            <img class="mini-v100" src="images/nv100.png" />
+            <img class="mini-v100" src="images/nv100.png" />
+          <div>
+          <div data-id="price-tag" style="position: absolute;right: 0;top: 0;font-size: 3em;color: #191919;background-color: white;border-radius: 50px;margin: 155px 185px 0px 90px;padding: 5px 60px;">
+            <p><span>$30/hour</span></p>
+          </div>
+        </section>
+        <section>
+          <img style="border-radius: 50px; padding: 40px; background-color: white;" src="images/1558m-training.png" />
+        </section>
+        <section>
+          <iframe style="width:100%; height: 600px"e src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTUtsEkMFVgZNTPB79leNOG2kUlhwpY2m-AvU1zYC27UzzwNOcoLeuXEWbjMLAFulWQ0qsrPyA89RaH/pubhtml?gid=938714764&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+        </section>
+        <section>
+          <iframe style="width:100%; height: 600px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTUtsEkMFVgZNTPB79leNOG2kUlhwpY2m-AvU1zYC27UzzwNOcoLeuXEWbjMLAFulWQ0qsrPyA89RaH/pubhtml?gid=1842080863&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+        </section>
       </div>
     </div>
 
@@ -79,6 +277,8 @@
       // - https://revealjs.com/initialization/
       // - https://revealjs.com/config/
       Reveal.initialize({
+        width: '100%',
+	      height: '100%',
         hash: true,
 
         // Learn about plugins: https://revealjs.com/plugins/
