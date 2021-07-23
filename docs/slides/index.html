@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>reveal.js</title>
+    <title>The AI Scala Developer</title>
 
     <link rel="stylesheet" href="dist/reset.css">
     <link rel="stylesheet" href="dist/reveal.css">
@@ -18,6 +18,14 @@
         width: 175px;
         margin: -10px 0;
       }
+
+      .google-chart {
+        width:90%;
+        height: 600px;
+        border-radius: 50px;
+        padding: 40px;
+        background-color: white
+      }
     </style>
 
     <!-- Theme used for syntax highlighted code -->
@@ -28,7 +36,7 @@
       <div class="slides">
         <section>
           <h1 style="text-transform: none; padding-top: 50px; padding-bottom: 25px; line-height:0.75em;"><span style="font-size: 40%">The</span><br />AI Scala Developer</h1>
-          <img style="filter: drop-shadow(5px 5px 5px #444);" src="images/scala-robot.png" />
+          <img style="width:450px; filter: drop-shadow(5px 5px 5px #444);" src="images/scala-robot.png" />
         </section>
         <section>
            <ol style="font-size:125%;line-height:2.5em;">
@@ -40,35 +48,69 @@
         <section>
           <h1 class="r-fit-text">GPT-3</h1>
         </section>
-        <section>
-          <ul style="font-size:125%;line-height:2.5em;">
-            <li>Released June 2020 by OpenAI</li>
-            <li class="fragment">Human-like text prediction</li>
-          </ul>
+        <section style="font-size:125%;line-height:2.5em;">
+          <p>Released June 2020 by OpenAI</p>
+          <p class="fragment">Human-like text prediction</p>
         </section>
         <section>
-          <ul style="font-size:125%;line-height:2.5em;">
-            <li class="fragment">Example prompt</li>
-            <li class="fragment">Example result</li>
-          </ul>
+          <p style="font-style:italic">
+            In a shocking finding, scientist discovered a herd of unicorns living in a remote, previously unexplored valley, in the Andes Mountains. Even more surprising to the researchers was the fact that the unicorns spoke perfect English.
+          </p>
+          <p class="fragment">
+          They also were found to have perfectly coiffed hair, and wore what appeared to be Dior makeup.
+
+          “We were shocked to discover the unicorns,” said anthropologist Daniel St. Maurice. “They were like nothing we had ever seen before. We had heard legends of the unicorns, but never thought they actually existed.” ...
+          </p>
         </section>
         <section>
-          <ul style="font-size:125%;line-height:2.5em;">
-            <li>Pretraining (~45TB dataset) </li>
-            <li class="fragment">Finetuning</li>
-          </ul>
+          <div style="float:left; width: 45%;" data-fragment-index="1">
+            <img style="margin-top: 50px; margin-bottom: -75px; filter: invert(100%); width: 180px;" src="images/brain.svg" />
+            <p>Pretraining</p>
+            <img style="margin-top: 50px; margin-bottom: 30px; filter: invert(100%); width: 75px;" src="images/arrow-up.svg" />
+            <br />
+            <img style=" margin-bottom: -35px; filter: invert(100%); width: 150px;" src="images/book.svg" />
+            <p>~45TB dataset</p>
+          </div>
+          <div style="float:left; width: 10%;"  class="fragment" data-fragment-index="2">
+            <img style="transform: rotate(90deg); margin-top: 300px; filter: invert(100%); width: 100px;" src="images/arrow-up.svg" />
+          </div>
+          <div style="float:left; width: 45%;" class="fragment" data-fragment-index="2">
+            <img style="margin-top: 50px; margin-bottom: -75px; filter: invert(100%); width: 180px;" src="images/brain.svg" />
+            <p>Finetuning</p>
+            <img style="margin-top: 50px; margin-bottom: 30px; filter: invert(100%); width: 75px;" src="images/arrow-up.svg" />
+            <br />
+            <img style=" margin-bottom: -35px; filter: invert(100%); width: 150px;" src="images/book.svg" />
+            <p>Your dataset</p>
+          </div>
         </section>
         <section>
           <h1 style="font-size: 2.5em;">Demo: AI Dungeon</h1>
+          <a target="_blank" href="https://play.aidungeon.io/main/newGame">Link</a>
         </section>
         <section>
           <h1 style="font-size: 2.5em;">Demo: JSX</h1>
+          <a target="_blank" href="https://twitter.com/i/status/1282676454690451457">Link</a>
+        </section>
+        <section>
+          <img style="width: 70%; border-radius: 50px; padding: 40px; background-color: white;" src="images/openai-form.png" />
+        </section>
+        <section>
+          <h1 class="r-fit-text">GPT-2</h1>
         </section>
         <section style="font-size: 125%;">
           <pre>
-            <code class="language-scala" data-noescape data-trim data-line-numbers="1|1-2">
-              > Demo small training (10mins)
-              > input > output
+            <code class="language-scala" data-noescape data-trim data-line-numbers="1-4|1-11">
+              /**
+               * @return just the odd values
+               */
+              def filterOdds(values: List[Int]): List[Int] =
+                values
+              
+              filterOrHexFilter(values: List[Int], filters: [Filter])
+                return returns
+
+              def haveUnits(value):
+                return value == 2
             </code>
           </pre>
         </section>
@@ -90,7 +132,7 @@
           </pre>
         </section>
         <section>
-          <img style="border-radius: 50px; padding: 40px; background-color: white;" src="images/120m-training.png" />
+          <iframe class="google-chart" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTUtsEkMFVgZNTPB79leNOG2kUlhwpY2m-AvU1zYC27UzzwNOcoLeuXEWbjMLAFulWQ0qsrPyA89RaH/pubhtml?gid=2145345908&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
         </section>
         <section data-auto-animate style="font-size: 125%;">
           <pre data-id="code-animation">
@@ -152,6 +194,15 @@
             </code>
           </pre>
         </section>
+        <section style="font-size: 2em;">
+          <pre>
+            <code class="language-scala" data-noescape data-trim data-line-numbers>
+              def fizzing(max: Int): Unit = {  
+                println("fizzed");
+              }
+            </code>
+          </pre>
+        </section>
         <section style="font-size: 125%;">
           <pre>
             <code class="language-scala" data-noescape data-trim data-line-numbers="1-5|1-8">
@@ -177,10 +228,25 @@
             </code>
           </pre>
         </section>
-        <section>
-          <pre>
-            <code class="language-scala" data-noescape data-trim data-line-numbers="1-4|1-5|1-6|1-7|1-27">
+        <section data-auto-animate>
+          <pre data-id="code-animation">
+            <code class="language-scala" data-noescape data-trim data-line-numbers="1-4|1-5|1-6|1-7">
               /**
+                * This method parses a string into a list of CsvValues
+                * by splitting on commas
+                */
+              def parseStringFromString(csv: CSV): List[String] = {
+                val left = csv.split(",")
+                val right = csv.split(",")
+                ?
+                ?
+              </code>
+            </pre>
+          </section>
+          <section data-auto-animate>
+            <pre data-id="code-animation" style="height: 575px; font-size: 40%;">
+              <code class="language-scala" data-noescape data-trim data-line-numbers>
+                /**
                 * This method parses a string into a list of CsvValues
                 * by splitting on commas
                 */
@@ -212,13 +278,19 @@
           </pre>
         </section>
         <section>
-          <img style="margin-top:-50px" src="images/nv100.png" />
+          <img style="width: 70%; margin-top:-50px; padding: 50px; background: black; border-radius: 50px" src="images/ai-csv-parser.png" />
         </section>
         <section>
-          <img style="border-radius: 50px; padding: 40px; background-color: white;" src="images/nv100-amazon.png" />
+          <p>What next?</p>
         </section>
         <section>
-          <img style="border-radius: 50px; padding: 40px; background-color: white;" src="images/nv100-ebay.png" />
+          <img style="width: 70%; margin-top:-100px" src="images/nv100.png" />
+        </section>
+        <section>
+          <img style="width: 70%; border-radius: 50px; padding: 40px; background-color: white;" src="images/nv100-amazon.png" />
+        </section>
+        <section>
+          <img style="width: 70%; border-radius: 50px; padding: 40px; background-color: white;" src="images/nv100-ebay.png" />
         </section>
         <section data-auto-animate>
           <div style="float:left; width: 30%; margin: 105px 0px 0px 100px;">
@@ -233,7 +305,7 @@
             <img class="mini-v100" src="images/nv100.png" /><br />
             <img class="mini-v100" src="images/nv100.png" />
             <img class="mini-v100" src="images/nv100.png" />
-          <div>
+          </div>
           <div data-id="price-tag" class="fragment" data-fragment-index="2" style="position: absolute;right: 0;top: 0;font-size: 3em;color: #191919;background-color: white;border-radius: 50px;margin: 155px 325px 0px 90px;padding: 5px 60px;">
             <p>$30</p>
           </div>
@@ -243,27 +315,60 @@
             <img style="width:200px" src="images/wutface.png" />
           </div>
           <div style="float:left; width: 55%; margin-top:20px;">
+            <img data-id="v100" class="mini-v100" src="images/nv100.png" />
+            <img class="mini-v100" src="images/nv100.png" />
+            <img class="mini-v100" src="images/nv100.png" /><br />
             <img class="mini-v100" src="images/nv100.png" />
             <img class="mini-v100" src="images/nv100.png" />
             <img class="mini-v100" src="images/nv100.png" /><br />
             <img class="mini-v100" src="images/nv100.png" />
             <img class="mini-v100" src="images/nv100.png" />
-            <img class="mini-v100" src="images/nv100.png" /><br />
-            <img class="mini-v100" src="images/nv100.png" />
-            <img class="mini-v100" src="images/nv100.png" />
-          <div>
+          </div>
           <div data-id="price-tag" style="position: absolute;right: 0;top: 0;font-size: 3em;color: #191919;background-color: white;border-radius: 50px;margin: 155px 185px 0px 90px;padding: 5px 60px;">
             <p><span>$30/hour</span></p>
           </div>
         </section>
-        <section>
-          <img style="border-radius: 50px; padding: 40px; background-color: white;" src="images/1558m-training.png" />
+        <section data-auto-animate data-auto-animate-duration="0.5">
+          <div style="float:left;width: 30%;margin: 45px 0px 0px 100px;">
+            <img data-id="v100" style="width:400px;" src="images/nv100.png" />
+          </div>
+          <div data-id="price-tag" style="position: absolute;right: 0;top: 0;font-size: 3em;color: #191919;background-color: white;border-radius: 50px;margin: 155px 212px 0px 90px;padding: 5px 60px;">
+            <p><span>$3/hour</span></p>
+          </div>
         </section>
         <section>
-          <iframe style="width:100%; height: 600px"e src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTUtsEkMFVgZNTPB79leNOG2kUlhwpY2m-AvU1zYC27UzzwNOcoLeuXEWbjMLAFulWQ0qsrPyA89RaH/pubhtml?gid=938714764&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+          <iframe class="google-chart" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTUtsEkMFVgZNTPB79leNOG2kUlhwpY2m-AvU1zYC27UzzwNOcoLeuXEWbjMLAFulWQ0qsrPyA89RaH/pubhtml?gid=938714764&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
         </section>
         <section>
-          <iframe style="width:100%; height: 600px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTUtsEkMFVgZNTPB79leNOG2kUlhwpY2m-AvU1zYC27UzzwNOcoLeuXEWbjMLAFulWQ0qsrPyA89RaH/pubhtml?gid=1842080863&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+          <iframe class="google-chart" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTUtsEkMFVgZNTPB79leNOG2kUlhwpY2m-AvU1zYC27UzzwNOcoLeuXEWbjMLAFulWQ0qsrPyA89RaH/pubhtml?gid=1842080863&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+        </section>
+        <section>
+          <img src="images/copilot.png" style="width: 400px;margin-bottom: -30px;margin-top: -45px;" /><br />
+          
+          <svg style="transform: scale(2.5); padding-right: 34px; margin-bottom: 100px;" height="22.6" viewBox="0 0 692 87" fill="currentColor">
+            <path d="M117.992 40.408C117.992 60.472 129.52 72.88 149.32 72.88C167.536 72.88 180.032 62.496 180.032 43.4V37.504H149.496V48.68H165.16C164.544 56.16 158.736 61.088 149.672 61.088C139.728 61.088 133.04 55.368 133.04 44.544V35.92C133.04 26.064 138.848 19.464 149.056 19.464C156.36 19.464 161.552 22.984 163.136 28.528H177.92C176.248 15.68 164.808 7.056 149.232 7.056C130.576 7.056 117.992 19.376 117.992 40.408Z"></path>
+            <path d="M184.204 19.64H197.58V6.528H184.204V19.64ZM184.204 72H197.58V24.832H184.204V72Z"></path>
+            <path d="M224.541 35.656H233.869V24.832H224.541V10.048H211.165V24.832H202.805V35.656H211.165V61.616C211.165 67.864 213.805 72 221.725 72H233.869V61.44H224.541V35.656Z"></path>
+            <path d="M239.82 72H254.076V44.984H283.028V72H297.284V7.848H283.028V33.72H254.076V7.848H239.82V72Z"></path>
+            <path d="M348.996 24.832H335.62V49.736C335.62 56.864 331.748 61.968 325.412 61.968C320.132 61.968 317.14 58.8 317.14 52.2V24.832H303.676V54.312C303.676 65.576 308.868 72.88 319.428 72.88C326.908 72.88 332.012 69.272 334.74 63.376H335.532L337.292 72H348.996V24.832Z"></path>
+            <path d="M355.492 72H367.196L368.868 63.552H369.66C372.388 69.624 378.46 72.88 385.236 72.88C397.38 72.88 404.42 63.816 404.42 48.504C404.42 33.016 397.204 23.952 384.972 23.952C377.404 23.952 371.86 27.824 369.66 33.456H368.868V6.528H355.492V72ZM368.868 50.528V46.48C368.868 39.44 373.356 34.864 380.308 34.864C386.644 34.864 390.78 38.12 390.78 44.72V52.288C390.78 58.096 387.436 62.056 380.396 62.056C373.268 62.056 368.868 57.392 368.868 50.528Z"></path>
+            <path d="M452.264 72.88C468.368 72.88 479.72 63.904 481.656 49.736H469.6C467.84 57.744 461.24 62.672 452.44 62.672C441.528 62.672 434.576 55.544 434.576 45.424V34.952C434.576 23.952 441.792 17.264 452.616 17.264C462.296 17.264 468.192 22.456 469.6 30.112H481.656C480.248 16.12 469.248 6.968 452.968 6.968C433.696 6.968 422.432 19.464 422.432 40.056C422.432 60.472 433.52 72.88 452.264 72.88Z"></path>
+            <path d="M484.906 48.68C484.906 63.64 493.882 72.88 507.786 72.88C522.306 72.88 530.754 63.2 530.754 48.68C530.754 33.192 521.25 24.48 507.786 24.48C493.882 24.48 484.906 33.632 484.906 48.68ZM495.994 52.464V45.16C495.994 37.944 500.658 33.456 507.786 33.456C514.738 33.456 519.578 37.856 519.578 45.16V52.464C519.578 59.944 514.65 63.904 507.786 63.904C501.098 63.904 495.994 60.032 495.994 52.464Z"></path>
+            <path d="M535.046 86.696H545.958V63.288H546.662C549.214 68.832 554.758 72.44 562.678 72.44C574.47 72.44 581.774 63.816 581.774 48.416C581.774 33.368 574.646 24.48 562.678 24.48C555.55 24.48 549.566 27.736 546.662 33.632H545.958L544.638 25.36H535.046V86.696ZM558.806 63.552C551.062 63.552 545.958 58.536 545.958 50.792V46.128C545.958 38.472 550.974 33.368 558.894 33.368C566.55 33.368 570.51 37.768 570.51 44.368V52.552C570.51 59.592 565.934 63.552 558.806 63.552Z"></path>
+            <path d="M585.969 18.76H596.793V6.968H585.969V18.76ZM585.969 72H596.793V25.36H585.969V72Z"></path>
+            <path d="M602.562 72H613.386V6.968H602.562V72Z"></path>
+            <path d="M617.659 48.68C617.659 63.64 626.635 72.88 640.539 72.88C655.059 72.88 663.507 63.2 663.507 48.68C663.507 33.192 654.003 24.48 640.539 24.48C626.635 24.48 617.659 33.632 617.659 48.68ZM628.747 52.464V45.16C628.747 37.944 633.411 33.456 640.539 33.456C647.491 33.456 652.331 37.856 652.331 45.16V52.464C652.331 59.944 647.403 63.904 640.539 63.904C633.851 63.904 628.747 60.032 628.747 52.464Z"></path>
+            <path d="M682.319 34.248H691.823V25.36H682.319V10.4H671.495V25.36H663.135V34.248H671.495V63.288C671.495 68.48 673.695 72 680.383 72H691.823V63.288H682.319V34.248Z"></path>
+          </svg>
+          <br />
+          <a target="_blank" href="https://copilot.github.com/">copilot.github.com</a>
+        </section>
+        <section style="font-style: italic;">
+          <p>"GitHub Copilot is powered by OpenAI Codex"</p>
+          <p>"OpenAI Codex has broad knowledge of how people use code and is significantly more capable than GPT-3 in code generation, in part, because it was trained on a data set that includes a much larger concentration of public source code."</p>
+        </section>
+        <section>
+          <img style="width: 70%; border-radius: 50px; padding: 40px; background-color: white;" src="images/copilot-example.png" />
         </section>
       </div>
     </div>
@@ -284,6 +389,13 @@
         // Learn about plugins: https://revealjs.com/plugins/
         plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
       });
+
+      // For some reason the google chart iframes need to be reloaded after the slides are initialized
+      // Reveal.initialize().then( () => {
+      //   document.getElementsByClassName('google-chart').forEach(element => {
+      //     element.contentWindow.location.reload();
+      //   });
+      // } )
     </script>
   </body>
 </html>
